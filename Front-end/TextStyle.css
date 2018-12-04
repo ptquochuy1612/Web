@@ -3,7 +3,7 @@
 {
 	color:#95200c;
 	font-style: all; 
-	font-size: 30;
+	font-size: 30px;
 }
 #HeaderAlign
 {
@@ -12,8 +12,9 @@
 }
 #HeaderPos
 {
-	top: 10;
-	bottom: 20;
+	position: fixed;
+	left: 10px;
+	bottom: 20px;
 }
 #HeadColor
 {
