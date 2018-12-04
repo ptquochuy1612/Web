@@ -1,0 +1,21 @@
+/* Css document */
+.HeaderTitle
+{
+	color:#95200c;
+	font-style: all; 
+	font-size: 30;
+}
+#HeaderAlign
+{
+	text-align: center;
+
+}
+#HeaderPos
+{
+	top: 10;
+	bottom: 20;
+}
+#HeadColor
+{
+	color: #4277f4;
+}
