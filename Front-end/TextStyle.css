@@ -20,3 +20,24 @@
 {
 	color: #4277f4;
 }
+.ShopName
+{
+	position: fixed;
+	left: 150px;
+	top: 25px;
+}
+.LogoShop
+{
+	position: fixed;
+	left: 30px;
+	top: 30px;
+	height: 100px;
+	width: 100px;
+}
+.LogoLink
+{
+	
+	margin-top: 80px;
+	height: 40px;
+	width: 40px;
+}
