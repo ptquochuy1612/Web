@@ -14,14 +14,14 @@
 {
 	font-family: arial black, arial;
 	font-size: 25px;
-	position: fixed;
+	position: absolute;
 	left: 150px;
 	top: 20px;
 	color:white;
 }
 .LogoShop
 {
-	position: fixed;
+	position: absolute;
 	left: 10px;
 	top: 20px;
 	height: 120px;
@@ -40,7 +40,7 @@
 	background: none;
 	border: none;
 	border-right: 3px solid white;
-	position: fixed;
+	position: absolute;
 	top:20px;
 	font-size: 17px;
 	right: 120px;
@@ -54,7 +54,7 @@
 	background: none;
 	border: none;
 
-	position: fixed;
+	position: absolute;
 	top:20px;
 	font-size: 16px;
 	right: 45px;
@@ -68,24 +68,19 @@
 	
 	background: none;
 	border: none;
-	position: fixed;
-	
-	font-size: 50px;
-	right: 60px;
-	top:45px;
-	height: 50px;
-	width: 50px;
-	font-family: arial, tahoma;
+	position: absolute;
+	right: 120px;
+	top:50px;
+	height: 3%;
+	width: 3%;
 	color: #ffffff;
 }
 .CartImg
 {
-	height: 50px;
-	width: 50px;
-	position: fixed;
-	top:45px;
-	right: 60px;
+	height: 70px;
+	width:70px;
 }
+
 .Colum
 {
 	float: left;
@@ -93,16 +88,112 @@
 }
 .testCorousel
 {
-	position: fixed;
-	right: 150px;
-	top:200px;
-	height: 600px;
-	width: 800px;	
+	position: absolute;
+	margin-left: 550px;
+	margin-top: 50px;
 }
 .item
 {
-	height: 450px;
+	height: 500px;
 	width: 700px;
-	align-items: center;
-	margin-left: 275px;
+	
 }
+
+ul, ol
+{
+	list-style: none;
+}
+
+.Best
+{	
+	clear: both;
+    display: block;
+    background: #fff;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    flex: 1 100%;
+   ;
+    margin-bottom: 15px;
+
+
+}
+
+.BestSale-feature
+{
+	position: relative;
+	border: 1px;
+	float: left;
+	opacity: 1;
+	border-right: 3px solid #eee;
+	border-top: 3px solid #eee;
+    border-bottom: 3px solid #eee;
+    border-left:  3px solid #eee;
+  
+}
+.BestSale-feature img
+{
+
+	height: 350px;
+	width: 350px;
+}
+
+.BestSale-item
+{
+	position: relative;
+	border: 1px;
+	float: left;
+	padding-left: 20px;
+	border-right: 3px solid #eee;
+	border-top: 3px solid #eee;
+    border-bottom: 3px solid #eee
+
+}
+
+.BestSale-item img
+{
+	position: relative;
+	border: 5px;
+	height: 150px;
+	width: 150px;
+	opacity: 1;
+
+}
+
+.Feature-Name
+{
+	font-family: arial, tahoma;
+	font-size: 20px;
+	color: red;
+}
+.Mini-Name
+{
+	font-family: arial, tahoma;
+	font-size: 15px;
+	color: red;
+}
+.BestSale-price
+{
+	display: inline;
+	font-family: arial, tahoma;
+	background: orange;
+	color: white;
+
+}
+.BestSale li
+{
+	
+	float: left;
+}
+
+
+
+
+
+
+
