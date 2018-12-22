@@ -4,12 +4,29 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Untitled Document</title>
 </head>
-<?php
-	include_once('DataProvider.php')
-?>
 <!-- 10 sản phẩm mới nhất -->
 
 <body>
+<?php
+  if(isset($_POST[ID]))
+  {
+    include_once('DataProvider.php')
+    $id = $_POST[ID];
+    $sql = "select top 1 *x from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID where ID = '". $id . "'";
+    $row = DataProvider::execQuery($sql);
+    $img = row["HinhAnh"];
+    $cost = row["Gia"];
+    $view = row["LuotXem"];
+    $des = row["MoTa"];    
+    $src = row["XuatXu"];
+    $type = row["LoaiSP"];
+    $name = row["Ten"];
+    $sql = "select count(*) as Dem FROM ChiTietDatHang where MaSP = '" . $id;
+    $row = DataProvider::execQuery($sql);
+    $count = row["Dem"];
+    $nsxid = row["NhaSanXuatID"];
+
+?>
 <table width="1200" border="1" align="center" cellpadding="5">
   <tr>
     <td>Hình ảnh</td>
@@ -21,35 +38,52 @@
     <td>Loại</td>
     <td>Nhà sản xuất</td>
   </tr>
-  <?php
-  		$sql = "select * from SanPham as SP INNER JOIN NhaSanXuat as NSX on NSX.ID = SP.NhaSanXuatID INNER JOIN DanhMuc as DM on DM.ID = SP.LoaiSP"
-		
-  		$list = DataProvider::execQuery($sql);
-		while($row = mysqli_fetch_array($list))
-		{
-  ?>
   <tr>
-    <td><?php echo $row["HinhAnh"]; ?></td>
-    <td><?php echo number_format($row["Gia"]); ?></td>
-    <td><?php echo $row["LuotXem"]; ?></td>
-    <td><?php echo $row["SoLuong"]; ?></td>
-    <td><?php echo $row["MoTa"]; ?></td>
-    <td><?php echo $row["XuatXu"]; ?></td>
-    <td><?php echo $row["DM.Ten"]; ?></td>
-    <td><?php echo $row["NSX.Ten"]; ?></td>
+    <img width="200px" height="200px" src="<?php echo $img ?>">
+    <td><?php echo number_format($cost); ?></td>
+    <td><?php echo $view; ?></td>
+    <td><?php echo $count; ?></td>
+    <td><?php echo $des; ?></td>
+    <td><?php echo $src; ?></td>
+    <td><?php echo $type; ?></td>
+    <td><?php echo $name; ?></td>
   </tr>
-  <?php
-		}
-		// Chờ làm xong linked them
-		/*
-			$sql = "select TOP 5 * from SanPham where Loai = " .$row["Loai"];
-		
-  		$list = DataProvider::execQuery($sql);
-		while($row = mysqli_fetch_array($list))
-		{
-		*/
-  ?>
-  
+  <tr>
+    <td colspan="12">
+     <div>
+        <p>5 sản phẩm cùng loại</p>
+        <?php
+        $sql = "select TOP 5 * from SanPham where LoaiSP = " . $type;
+    
+        $list = DataProvider::execQuery($sql);
+        while($row = mysqli_fetch_array($list))
+       {
+      ?>
+       <a href="1.4.php?ID=<?php echo $row["ID"]; ?>"><?php echo $row["TenSP"]; ?></a> | 
+       <?php
+      }
+       ?>
+      </div>      
+   </td>
+  </tr>
+  <tr>
+    <td colspan="12">
+     <div>
+        <p>5 sản phẩm cùng nhà sản xuất </p>
+        <?php
+        $sql = "select TOP 5 * from SanPham where NhaSanXuatID = " . $nsxid;
+    
+        $list = DataProvider::execQuery($sql);
+        while($row = mysqli_fetch_array($list))
+       {
+      ?>
+       <a href="1.4.php?ID=<?php echo $row["ID"]; ?>"><?php echo $row["TenSP"]; ?></a> | 
+       <?php
+      }
+       ?>
+      </div>      
+   </td>
+  </tr>
 </table>
 </body>
 </html>
