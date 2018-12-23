@@ -120,10 +120,18 @@ ul, ol
     flex: 1 100%;
    ;
     margin-bottom: 15px;
+    width: 100%;
+
 
 
 }
 
+.container
+{
+	width: 100%;
+	padding: none;
+	margin: none;
+}
 .BestSale-feature
 {
 	position: relative;
@@ -139,8 +147,8 @@ ul, ol
 .BestSale-feature img
 {
 
-	height: 350px;
-	width: 350px;
+	height: 365px;
+	width: 365px;
 }
 
 .BestSale-item
@@ -189,6 +197,14 @@ ul, ol
 {
 	
 	float: left;
+}
+.ListProduct
+{
+
+}
+.container
+{
+	width: 100%;
 }
 
 
