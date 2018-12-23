@@ -10,7 +10,7 @@
 		{
 			$user = $_POST["user"];
 			$pass = $_POST["user"];
-			$sql = "exec proc usp_LOGIN " . $user . " " . $pass;
+			$sql = "exec proc usp_LOGIN " . $user . "," . $pass;
 
 			$ad = DataProvider::execQuery($sql);
 			if($ad = 1)
