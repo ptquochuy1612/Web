@@ -8,7 +8,7 @@
 
 <body>
 <?php
-  if(isset($_POST[ID]))
+  if(isset($_POST["ID"]))
   {
     include_once('DataProvider.php')
     $id = $_POST[ID];
@@ -85,5 +85,8 @@
    </td>
   </tr>
 </table>
+<?php
+  }
+?>
 </body>
 </html>

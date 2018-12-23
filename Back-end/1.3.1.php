@@ -55,8 +55,6 @@
   </tr>
   <?php
 		}
-    <?php
-		}
 		
 		$sql  = "select count(*) from sach";
 		$result = DataProvider::execQuery($sql);
@@ -65,27 +63,31 @@
 		$number_of_pages = ceil($number_of_rows/$rowsPerPage);
  	?>
   <tr>
-    <td colspan="5" align="center">
+    <td colspan="12" align="center">
     <?php if($curPage > 1) { ?>
-    <p><a href="1.3.1.php?page=1">Đầu</a> <a href="1.3.1.php?page=<?php echo $curPage-1; ?>&Loai=<?php echo $l-1; ?>">Trước</a>
-<?php
-	}
+    <div>
+      <a href="1.3.1.php?page=1">Đầu</a> <a href="1.3.1.php?page=<?php echo $curPage-1; ?>&Loai=<?php echo $l; ?>">Trước</a>
+    <?php
 		for($page = 1;$page <=  $number_of_pages;$page++)
 		{
 			if($page == $curPage)
 				echo "<strong>".$page."</strong> ";
-			else echo "<a href='1.3.1.php?page=".$page."'>".$page."</a> &Loai=<?php echo $l-1; ?>";
+			else echo "<a href='1.3.1.php?page=".$page."'>".$page."</a> &Loai=<?php echo $l; ?>";
 		}
 		
 		if($curPage < $number_of_pages) {
-	?> 
-<a href="1.3.1.php?page=<?php echo $curPage+1; ?>">Sau</a> <a href="1.3.1.php?page=<?php echo $number_of_pages; ?>&Loai=<?php echo $l-1; ?>">Cuối</a></p>
-	<?php
-		}
-	?>
-</td>
+	 ?> 
+    <a href="1.3.1.php?page=<?php echo $curPage+1; ?>">Sau</a> <a href="1.3.1.php?page=<?php echo $number_of_pages; ?>&Loai=<?php echo $l; ?>">Cuối</a></p>
+    <?php
+     }
+    }
+    ?>
+    </div>
+    </td>
   </tr>
-	}
-  ?>
+</table>
+<?php
+  }
+?>
 </body>
 </html>
