@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Hien thi 10 san pham moi nhat</title>
+<title>My Shop</title>
 </head>
 <!-- 10 sản phẩm mới nhất -->
 
