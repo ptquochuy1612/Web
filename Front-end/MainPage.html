@@ -15,7 +15,8 @@
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  	
+
+
 
 </head>
 <body>
@@ -43,7 +44,8 @@
 		
 		
 	</div>
-	<form class="example" action="action_page.php">
+	<!-- Searching bar: searching......... -->
+	<form class="example" action="Search.php">
   			<input type="text" placeholder="Search.." name="search">
   			<button type="submit"><i class="fa fa-search"></i></button>
   	</form>
@@ -55,13 +57,69 @@
 		
 
 <!-- Right Header Web -->
-
-	<form>
-
-		<button type="button" class="LogInBtn">Đăng Nhập</button>
+	<button id="id020" onclick="document.getElementById('Login').style.display='block'" class="LogInBtn">Đăng nhập</button>
+	<div class="modal" id="Login" >
 
 
-		<button type="button" class="SignUpBtn">Đăng Ký</button>
+			<form class="modal-content animation" action="1.6LogIn.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Nhập</h1>
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+					<label>
+      					<input type="checkbox" checked="checked" name="Remember">Nhớ tài khoản
+    				</label>
+
+					<button type="submit" >Đăng Nhập</button>
+				
+
+
+				</div>
+				<div class="LogIn-Box">
+					<button type="button" class="cancel" onclick="document.getElementById('Login').style.display='none'">Đóng</button>
+					<span class="forgotPass"><a href="for got link">Quên mật khẩu ?</a></span>
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
+	<!-- Sign up -->
+	<button id="id022" onclick="document.getElementById('SignUp').style.display='block'" class="SignUpBtn">Đăng Ký</button>
+	<div class="modal" id="SignUp" >
+
+
+			<form class="modal-content2 animation" action="1.7.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Ký</h1>
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+					<label>
+      					<input type="checkbox" checked="checked" name="Remember">Nhớ tài khoản
+    				</label>
+
+					<button type="submit" >Đăng Nhập</button>
+				
+
+
+				</div>
+				<div class="LogIn-Box">
+					<button type="button" class="cancel" onclick="document.getElementById('SignUp').style.display='none'">Đóng</button>
+					<span class="forgotPass"><a href="for got link">Quên mật khẩu ?</a></span>
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
 			
 		<button type="img" class="CartBtn"><img class="CartImg" src="./Pictures/Cart.png" alt="Can't Load Cart "></button>
 			
@@ -117,7 +175,7 @@
 
 <!-- Best Sale List Vie -->
 	
-	<p class="BestTitle" style="margin-top: 450px"><strong>BÁN CHẠY NHẤT</strong></p> 	
+	<p class="BestTitle" style="margin-top: 550px"><strong>BÁN CHẠY NHẤT</strong></p> 	
 	<div class="Best">
 		
 		
