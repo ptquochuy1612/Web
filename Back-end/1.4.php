@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>10 sản phẩm mới nhất</title>
+<title></title>
 </head>
-<!--  -->
 
 <body>
 <?php
   if(isset($_POST["ID"]))
   {
+    $int = (is_numeric($_POST["ID"]) ? (int)$_POST["ID"] : 0);
     include_once('DataProvider.php');
-    $id = $_POST[ID];
-    $sql = "select * from SanPham where ID = '". $id . "'";
+    $id = $int;
+    $sql = "select * from SanPham where ID = ". $id;
     $row = DataProvider::execQuery($sql);
     $img = row["HinhAnh"];
     $cost = row["Gia"];
@@ -21,7 +21,7 @@
     $src = row["XuatXu"];
     $type = row["LoaiSP"];
     $name = row["Ten"];
-    $sql = "select count(*) as Dem FROM ChiTietDatHang where MaSP = '" . $id;
+    $sql = "select count(*) as Dem FROM ChiTietDatHang where MaSP = " . $id;
     $row = DataProvider::execQuery($sql);
     $count = row["Dem"];
     $nsxid = row["NhaSanXuatID"];
@@ -87,6 +87,8 @@
 </table>
 <?php
   }
+  else echo "Wrong pattern";
 ?>
+
 </body>
 </html>
