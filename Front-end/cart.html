@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Your Cart</title>
+	<!-- Properties -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<!-- Add Css Type -->
+	<link rel="stylesheet" type="text/css" href="TextStyle.css">
+	<!-- Add JaveScript Type -->
+	<script type="text/javascript" src="MainJs.Js"></script>
+	<!-- Add Online Sources Type -->
+			<!-- Bootstrap -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  	<!-- Google reCAPTCHA add type -->
+  	<script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+	<div>
+<!-- Begin Header Web -->
+
+
+	<div > 
+		<a href="./MainPage.html"><h1 class="ShopName"><b>Lost in Viet Nam</b></h1></a>
+
+		<a href="./MainPage.html"><img src="./Pictures/Logoshop.png" alt="Can't Load Logo shop" class="LogoShop" style="margin-left: 10px;"></a>
+		<!-- Left Header Web -->
+		<div style="background-color: #ff6f61"  > 
+
+			<a href="https://facebook.com/Shop-Cái-Gì-Cũng-Được-370744087013071/?modal=admin_todo_tour"><img src="./Pictures/LogoFb.png" alt="Can't Load facebook logo" style="margin-left: 140px" class= "LogoLink"></a>
+
+			<a href="mailto:ptqhuy1612@gmail.com"><img src="./Pictures/LogoEmail.png" alt="Can't Load Email logo" style="margin-left: 2px;" class= "LogoLink"></a>
+
+			<a href="https://Intargram.com"><img src="./Pictures/LogoIntargram.png" alt="Can't Load Intargram logo" style="margin-left: 2px;" class= "LogoLink"></a>
+			<a href="https://plus.google.com/u/0/101214542404735199314"><img src="./Pictures/LogoG+.png" alt="Can't Load Intargram logo" style="margin-left: 2px;" class= "LogoLink"></a>
+
+
+		</div >
+		
+		
+		
+	</div>
+	<!-- Searching bar: searching......... -->
+	<form class="example" action="Search.php">
+  			<input type="text" placeholder="Search.." name="search">
+  			<button type="submit"><i class="fa fa-search"></i></button>
+  	</form>
+  	<div class="nav">
+  		
+  		
+
+  	</div>
+
+</div>
+<button id="id020" onclick="document.getElementById('Login').style.display='block'" class="LogInBtn">Đăng nhập</button>
+	<div class="modal" id="Login" >
+
+
+			<form class="modal-content animation" action="1.6LogIn.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Nhập</h1>
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+					<label>
+      					<input type="checkbox" checked="checked" name="Remember">Nhớ tài khoản
+    				</label>
+
+    				<!-- reCAPTCHA -->
+    				<div class="g-recaptcha" data-sitekey="6LflAIUUAAAAAGSGIX95uUbfoPeV4V6x1lRgzvFC"></div>
+
+					<button type="submit" >Đăng Nhập</button>
+				
+
+
+				</div>
+				<div class="LogIn-Box">
+					<button type="button" class="cancel" onclick="document.getElementById('Login').style.display='none'">Đóng</button>
+					<span class="forgotPass"><a href="for got link">Quên mật khẩu ?</a></span>
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
+	<!-- Sign up -->
+	<button id="id022" onclick="document.getElementById('SignUp').style.display='block'" class="SignUpBtn">Đăng Ký</button>
+	<div class="modal" id="SignUp" >
+
+
+			<form class="modal-content2 animation" action="1.7SignUp.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Ký</h1>
+					<label for="Email"><strong>Email/Số Điện Thoại</strong></label>
+					<input type="text" name="Email" placeholder="Nhập email/số của bạn..." required="Không được để trống email !">
+
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+
+					<label for"pass-repeat">Nhập Lại Mật Khẩu</label>
+					<input type="password" name="pass-repeat" placeholder="Nhập lại mật khẩu..." required="" required="Mật khẩu không được để trống !">
+				
+				</div>
+				<div class="LogIn-Box">
+					<button type="submit">Đăng Ký</button>
+					<button type="button" class="cancel" onclick="document.getElementById('SignUp').style.display='none'">Đóng</button>
+					
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
+	<form>	 	
+		<a href="./cart.html">
+			<button type="img" class="CartBtn"><img class="CartImg" src="./Pictures/Cart.png" alt="Can't Load Cart "></button>
+		</a>
+			
+	</form>
+
+</body>
+</html>

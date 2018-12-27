@@ -221,7 +221,7 @@ ul, ol
 {
 	
 	margin-top: 65px;
-	margin-left: 50px;
+	margin-left: px;
 	border: 1px 1px 1px 1px solid;
 
 }
@@ -234,6 +234,7 @@ ul, ol
 {
 	font-size: 20px;
 	color: #ff6f61;
+	margin-left: 10px;
 }
 .ProductList th
 {
