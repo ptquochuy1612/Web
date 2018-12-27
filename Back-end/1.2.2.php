@@ -11,11 +11,10 @@
 ?>
 <table width="200" border="1" cellpadding="5">
   <tr>
-    <td><p>Loại sản phẩm</p></td>
+    <td><p>Nhà sản xuất</p></td>
   </tr>
   <?php
-  	<?php
-  		$sql = "select * from NhaSanXuat"
+  		$sql = "select * from NhaSanXuat";
 		
   		$list = DataProvider::execQuery($sql);
 		while($row = mysqli_fetch_array($list))

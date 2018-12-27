@@ -14,8 +14,7 @@
     <td><p>Loại sản phẩm</p></td>
   </tr>
   <?php
-  	<?php
-  		$sql = "select * from DanhMuc"
+   		$sql = "select * from DanhMuc";
 		
   		$list = DataProvider::execQuery($sql);
 		while($row = mysqli_fetch_array($list))
