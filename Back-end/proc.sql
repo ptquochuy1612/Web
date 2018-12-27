@@ -8,7 +8,7 @@ AS BEGIN
 		RETURN @AD
 END
 
-CREATE PROC usp_REG 
+Go CREATE PROC usp_REG 
 @user nchar(15), @pass nchar(15), @sdt nchar(11), @dc nvarchar(51), @email  nchar(20), @admin int
 AS BEGIN
 	IF (EXISTS(SELECT * FROM NguoiDung WHERE Username = @user))
