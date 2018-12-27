@@ -6,7 +6,7 @@
 </head>
 <body>
 <?php
-  include_once('DataProvider.php')
+  include_once('DataProvider.php');
 ?>
 <table width="1200" border="1" align="center" cellpadding="5">
   <tr>
@@ -24,7 +24,7 @@
     <td>Tình trạng</td>
   </tr>
   <?php
-      $sql = "select top 10 * from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID order by LuotXem DESC"
+      $sql = "select * from SanPham order by LuotXem DESC LIMIT 10";
 		
   		$list = DataProvider::execQuery($sql);
 		while($row = mysqli_fetch_array($list))
@@ -34,7 +34,7 @@
     <td><?php echo $row["MaSP"]; ?></td>
     <td><?php echo $row["TenSP"]; ?></td>
     <td><?php echo $row["LoaiSP"]; ?></td>
-    <td><?php echo $row["Ten"]; ?></td>
+    <td><?php echo $row["NhaSanXuatID"]; ?></td>
     <td><?php echo $row["XuatXu"]; ?></td>
     <td><?php echo $row["MoTa"]; ?></td>
     <td><?php echo $row["NgayTao"]; ?></td>
