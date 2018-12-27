@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Your Cart</title>
+	<title>Chi Tiết Sản Phẩm</title>
 	<!-- Properties -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -17,12 +17,12 @@
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   	<!-- Google reCAPTCHA add type -->
   	<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+
 </head>
 <body>
-	<div>
-<!-- Begin Header Web -->
-
-
 	<div > 
 		<a href="./MainPage.html"><h1 class="ShopName"><b>Lost in Viet Nam</b></h1></a>
 
@@ -44,7 +44,7 @@
 		
 	</div>
 	<!-- Searching bar: searching......... -->
-	<form class="example" action="Search.php">
+	<form class="example" action="./Search.php">
   			<input type="text" placeholder="Search.." name="search">
   			<button type="submit"><i class="fa fa-search"></i></button>
   	</form>
@@ -55,11 +55,17 @@
   	</div>
 
 </div>
-<button id="id020" onclick="document.getElementById('Login').style.display='block'" class="LogInBtn">Đăng nhập</button>
+	
+
+<!-- End Left Header Web -->
+		
+
+<!-- Right Header Web -->
+	<button id="id020" onclick="document.getElementById('Login').style.display='block'" class="LogInBtn">Đăng nhập</button>
 	<div class="modal" id="Login" >
 
 
-			<form class="modal-content animation" action="1.6LogIn.php">
+			<form class="modal-content animation" action="./1.6LogIn.php">
 				<div class="LogIn-Box">
 					<h1>Đăng Nhập</h1>
 					<label for="uname"><strong>Tài Khoản</strong></label>
@@ -94,7 +100,7 @@
 	<div class="modal" id="SignUp" >
 
 
-			<form class="modal-content2 animation" action="1.7SignUp.php">
+			<form  class="modal-content2 animation" action="./1.7SignUp.php">
 				<div class="LogIn-Box">
 					<h1>Đăng Ký</h1>
 					<label for="Email"><strong>Email/Số Điện Thoại</strong></label>
@@ -116,26 +122,30 @@
 					
 					
 				</div>
+				
 			</form>
+
 				
 	</div>
-	<!-- Click & hide Log In popup -->
-
-	<form>	 	
-		<a href="./cart.html" class="CartBtn"> <img src="./Pictures/cart.png"></a>
-			
+	<DIV>
+	<form>
+	<a href="./cart.html" class="CartBtn"> <img src="./Pictures/cart.png"></a>
 	</form>
+	</DIV>
 
-	<!-- CHI TIẾT SẢN PHẨM -->
 	<div>
-		<form>
+		<form method="" action="./1.4.php" >
+			<img src="./Pictures/Ao.png"  alt= "Áo Việt Nam">
 			
-			
+
+
 		</form>
 
 
-
 	</div>
+
+
+
 
 
 </body>
