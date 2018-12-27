@@ -49,7 +49,7 @@
 		
 	</div>
 	<!-- Searching bar: searching......... -->
-	<form class="example" action="Search.php">
+	<form class="example" action="./Search.php">
   			<input type="text" placeholder="Search.." name="search">
   			<button type="submit"><i class="fa fa-search"></i></button>
   	</form>
@@ -70,7 +70,7 @@
 	<div class="modal" id="Login" >
 
 
-			<form class="modal-content animation" action="./1.6LogIn.php">
+			<form class="modal-content animation" action="./../Back-end/1.6LogIn.php">
 				<div class="LogIn-Box">
 					<h1>Đăng Nhập</h1>
 					<label for="uname"><strong>Tài Khoản</strong></label>
@@ -105,7 +105,7 @@
 	<div class="modal" id="SignUp" >
 
 
-			<form class="modal-content2 animation" action="./1.7SignUp.php">
+			<form  class="modal-content2 animation" action="./../Back-end/1.7SignUp.php">
 				<div class="LogIn-Box">
 					<h1>Đăng Ký</h1>
 					<label for="Email"><strong>Email/Số Điện Thoại</strong></label>
@@ -127,17 +127,15 @@
 					
 					
 				</div>
+				
 			</form>
+
 				
 	</div>
-	<!-- Click & hide Log In popup -->
 	<form>
-			
-		<a href="./cart.html">
-			<button type="img" class="CartBtn" ><img class="CartImg" src="./Pictures/Cart.png" alt="Can't Load Cart "></button>
-		</a>
-			
+	<a href="./cart.html" class="CartBtn"> <img src="./Pictures/cart.png"></a>
 	</form>
+
 
 <!-- End Right Header Web -->
 
@@ -221,9 +219,10 @@
 <!-- End Mid Header Web -->
 
 <!-- Best Sale List Vie -->
-	
-	<p class="BestTitle" style="margin-top: 50px"><strong>BÁN CHẠY NHẤT</strong></p> 	
-	<form class="Best" action="1.1.2.php" >
+
+	<p class="BestTitle" style="margin-top: 50px"><strong>BÁN CHẠY NHẤT</strong></p> 
+<div>	
+	<form class="Best" action="./../Back-end/1.1.2.php" >
 		
 		
 		<ul id="">
@@ -335,8 +334,12 @@
 	
 		
 	</form>
-	<p class="BestTitle" style="margin-top: 10px;"><strong>XEM NHIỀU NHẤT</strong></p> 
-	<div class="Best">
+</div>
+	<p class="BestTitle" style="margin-top: 10px;"><strong>XEM NHIỀU NHẤT</strong></p>
+<div>	
+	<form class="Best" action="./../Back-end/1.1.3.php" >
+		
+		
 		<ul id="">
 			<li class="BestSale-feature">
 				<a href=" "> <!-- Ad link -->
@@ -442,16 +445,22 @@
 					</div>
 				</a>
 			</li>
-			
-
 		</ul>
+	
+		
+	</form>
+</div>
+
 
 		
 
-	</div>
+	
 
 	<p class="BestTitle" style="margin-top: 10px;"><strong>MỚI NHẤT</strong></p> 
-	<div class="Best">
+<div>	
+	<form class="Best" action="./../Back-end/1.1.1.php" >
+		
+		
 		<ul id="">
 			<li class="BestSale-feature">
 				<a href=" "> <!-- Ad link -->
@@ -557,10 +566,11 @@
 					</div>
 				</a>
 			</li>
-			
-
 		</ul>
-	</div>
+	
+		
+	</form>
+</div>
 
 
 
