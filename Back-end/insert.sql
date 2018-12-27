@@ -1,5 +1,4 @@
-Insert into SanPham(TenSP,LoaiSP,NhaSanXuatID,XuatXu,MoTa,NgayTao,SoLuong,HinhAnh,Gia,LuotXem,TinhTrang)
-Values('a',1,1,'TPHCM','', GETDATE() ,1,'',0,0,0)
+Insert into SanPham(TenSP,LoaiSP,NhaSanXuatID,XuatXu,MoTa,NgayTao,SoLuong,HinhAnh,Gia,LuotXem,TinhTrang) Values('a',1,1,'TPHCM','', GETDATE() ,1,'',0,0,0)
 Insert into SanPham(TenSP,LoaiSP,NhaSanXuatID,XuatXu,MoTa,NgayTao,SoLuong,HinhAnh,Gia,LuotXem,TinhTrang) Values('b',1,1,'TPHCM','',GETDATE(),1,'',0,0,0)
 Insert into SanPham(TenSP,LoaiSP,NhaSanXuatID,XuatXu,MoTa,NgayTao,SoLuong,HinhAnh,Gia,LuotXem,TinhTrang) Values('c',1,1,'TPHCM','',GETDATE(),1,'',0,0,0)
 Insert into SanPham(TenSP,LoaiSP,NhaSanXuatID,XuatXu,MoTa,NgayTao,SoLuong,HinhAnh,Gia,LuotXem,TinhTrang) Values('d',1,1,'TPHCM','',GETDATE(),1,'',0,0,0)

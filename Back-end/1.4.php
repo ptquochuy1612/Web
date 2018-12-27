@@ -2,17 +2,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>10 sản phẩm mới nhất</title>
 </head>
-<!-- 10 sản phẩm mới nhất -->
+<!--  -->
 
 <body>
 <?php
   if(isset($_POST["ID"]))
   {
-    include_once('DataProvider.php')
+    include_once('DataProvider.php');
     $id = $_POST[ID];
-    $sql = "select top 1 *x from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID where ID = '". $id . "'";
+    $sql = "select * from SanPham where ID = '". $id . "'";
     $row = DataProvider::execQuery($sql);
     $img = row["HinhAnh"];
     $cost = row["Gia"];

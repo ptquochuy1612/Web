@@ -14,9 +14,9 @@
 			$curPage = $_GET['page'];
 		$offset = ($curPage - 1) * $rowsPerPage;
 		
-		include_once('DataProvider.php')
+		include_once('DataProvider.php');
 		$l = $_POST["Loai"];
-		$sql = "select * from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID where LoaiSP = ( select * from DanhMuc where Ten = '". $l ."' ) LIMIT $offset, $rowsPerPage";
+		$sql = "select * from SanPham where LoaiSP = '". $l ."' LIMIT $offset, $rowsPerPage";
 
 ?>
 <table width="1200" border="1" align="center" cellpadding="5">
@@ -42,8 +42,7 @@
   <tr>
     <td><?php echo $row["MaSP"]; ?></td>
     <td><?php echo $row["TenSP"]; ?></td>
-    <td><?php echo $row["Ten"]; ?></td>
-    <td><?php echo $row["Ten"]; ?></td>
+    <td><?php echo $row["NhaSanXuatID"]; ?></td>
     <td><?php echo $row["XuatXu"]; ?></td>
     <td><?php echo $row["MoTa"]; ?></td>
     <td><?php echo $row["NgayTao"]; ?></td>

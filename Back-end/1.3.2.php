@@ -12,7 +12,7 @@
     if(isset($_GET['page']))
       $curPage = $_GET['page'];
     $offset = ($curPage - 1) * $rowsPerPage;
-		include_once('DataProvider.php')
+		include_once('DataProvider.php');
 		$l = $_POST["IDNSX"];
 		$sql = "select * from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID where NhaSanXuatID = '". $l ."' LIMIT $offset, $rowsPerPage";
 ?>
@@ -79,7 +79,9 @@
   ?>
 </td>
   </tr>
-  }
-  ?>
+</table>
+<?php
+}
+?>
 </body>
 </html>
