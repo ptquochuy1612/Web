@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Mua đi nhìn cái gì ?????</title>
+	<title>My Shop</title>
 	<!-- Properties -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="utf-8">
@@ -14,7 +14,9 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  	
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
 </head>
 <body>
@@ -23,7 +25,7 @@
 
 
 	<div > 
-		<a href="./MainPage.html"><h1 class="ShopName"><b>Name of Shop</b></h1></a>
+		<a href="./MainPage.html"><h1 class="ShopName"><b>Lost in Viet Nam</b></h1></a>
 
 		<a href="./MainPage.html"><img src="./Pictures/Logoshop.png" alt="Can't Load Logo shop" class="LogoShop" style="margin-left: 10px;"></a>
 		<!-- Left Header Web -->
@@ -35,23 +37,89 @@
 
 			<a href="https://Intargram.com"><img src="./Pictures/LogoIntargram.png" alt="Can't Load Intargram logo" style="margin-left: 2px;" class= "LogoLink"></a>
 			<a href="https://plus.google.com/u/0/101214542404735199314"><img src="./Pictures/LogoG+.png" alt="Can't Load Intargram logo" style="margin-left: 2px;" class= "LogoLink"></a>
-		
-		</div >
 
+
+		</div >
+		
+		
 		
 	</div>
+	<!-- Searching bar: searching......... -->
+	<form class="example" action="Search.php">
+  			<input type="text" placeholder="Search.." name="search">
+  			<button type="submit"><i class="fa fa-search"></i></button>
+  	</form>
+
+</div>
+	
 
 <!-- End Left Header Web -->
 		
 
 <!-- Right Header Web -->
-
-	<form>
-
-		<button type="button" class="LogInBtn">Đăng Nhập</button>
+	<button id="id020" onclick="document.getElementById('Login').style.display='block'" class="LogInBtn">Đăng nhập</button>
+	<div class="modal" id="Login" >
 
 
-		<button type="button" class="SignUpBtn">Đăng Ký</button>
+			<form class="modal-content animation" action="1.6LogIn.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Nhập</h1>
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+					<label>
+      					<input type="checkbox" checked="checked" name="Remember">Nhớ tài khoản
+    				</label>
+
+					<button type="submit" >Đăng Nhập</button>
+				
+
+
+				</div>
+				<div class="LogIn-Box">
+					<button type="button" class="cancel" onclick="document.getElementById('Login').style.display='none'">Đóng</button>
+					<span class="forgotPass"><a href="for got link">Quên mật khẩu ?</a></span>
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
+	<!-- Sign up -->
+	<button id="id022" onclick="document.getElementById('SignUp').style.display='block'" class="SignUpBtn">Đăng Ký</button>
+	<div class="modal" id="SignUp" >
+
+
+			<form class="modal-content2 animation" action="1.7.php">
+				<div class="LogIn-Box">
+					<h1>Đăng Ký</h1>
+					<label for="uname"><strong>Tài Khoản</strong></label>
+					<input type="text" name="uname" placeholder="Nhập tên tài khoản..." required="Tài khoản không được để trống !">
+
+					<label for="pass"><strong>Mật Khẩu</strong></label>
+					<input type="password" name="pass" placeholder="Nhập mật khẩu..." required="Mật khẩu không được để trống !">
+					<label>
+      					<input type="checkbox" checked="checked" name="Remember">Nhớ tài khoản
+    				</label>
+
+					<button type="submit" >Đăng Nhập</button>
+				
+
+
+				</div>
+				<div class="LogIn-Box">
+					<button type="button" class="cancel" onclick="document.getElementById('SignUp').style.display='none'">Đóng</button>
+					<span class="forgotPass"><a href="for got link">Quên mật khẩu ?</a></span>
+					
+				</div>
+			</form>
+				
+	</div>
+	<!-- Click & hide Log In popup -->
+
 			
 		<button type="img" class="CartBtn"><img class="CartImg" src="./Pictures/Cart.png" alt="Can't Load Cart "></button>
 			
@@ -85,7 +153,7 @@
     		</div>
 
     		<!-- Left and right controls -->
-    		<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+    	<a class="left carousel-control" href="#myCarousel" data-slide="prev">
 
       		<span class="glyphicon glyphicon-chevron-left"></span>
       		<span class="sr-only">Previous</span>
@@ -99,7 +167,7 @@
   			</div>
 	</div>
 	<div class="">
-			<H3>DANH SÁCH SẢN PHẨM</H3>
+			<p class="ProductList"><strong > DANH SÁCH SẢN PHẨM </strong></p>
 
 	</div>
 		
@@ -107,9 +175,9 @@
 
 <!-- Best Sale List Vie -->
 	
-	
+	<p class="BestTitle" style="margin-top: 550px"><strong>BÁN CHẠY NHẤT</strong></p> 	
 	<div class="Best">
-		<p style="font-size: 20px; margin-top: 500px; margin-left: 50px;"><strong>Mua đi</strong></p> 	
+		
 		
 		<ul id="">
 			<li class="BestSale-feature">
@@ -217,9 +285,123 @@
 				</a>
 			</li>
 		</ul>
+	
 		
 	</div>
-	<p style="font-size: 20px; margin-top: 100px;"><strong>Mua đi</strong></p> 	
+	<p class="BestTitle" style="margin-top: 10px;"><strong>XEM NHIỀU NHẤT</strong></p> 
+	<div class="Best">
+		<ul id="">
+			<li class="BestSale-feature">
+				<a href=" "> <!-- Ad link -->
+					<img src="./Pictures/Ao.png"  alt= "Áo Việt Nam">
+					<h3 class="Feature-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			<li class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ken.jpg" alt= "Kèn cổ vũ">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			<li class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			</li>
+			<li class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			<li class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			<li class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+				<li data-id="" class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			</li>
+				<li data-id="" class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			</li>
+				<li data-id="" class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			</li>
+				<li data-id="" class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			</li>
+				<li data-id="" class="BestSale-item">
+				<a href=""><!-- Ad link -->
+					<img src="./Pictures/Ao.png" alt= "Áo Việt Nam">
+					<h3 class="Mini-Name">Áo Việt Nam</h3>
+					<div class="BestSale-price">
+						<strong> 25000 VNĐ</strong>
+					</div>
+				</a>
+			</li>
+			
+
+		</ul>
+
+		
+
+	</div>
 
 
 
