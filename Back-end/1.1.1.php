@@ -27,7 +27,7 @@
     <td>Tình trạng</td>
   </tr>
   <?php
-  		$sql = "select top 10 * from SanPham inner join NhaSanXuat on NhaSanXuat.ID = SanPham.NhaSanXuatID order by NgayTao DESC";
+  		$sql = "select top 10 * from SanPham  = SanPham.NhaSanXuatID order by NgayTao DESC";
   		$list = DataProvider::execQuery($sql);
 		while($row = mysqli_fetch_array($list))
 		{

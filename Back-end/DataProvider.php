@@ -1,6 +1,6 @@
 <?php
 	define("SERVER","localhost");
-	define("DATABASE","QLBanHang");
+	define("DATABASE","qlbanhang");
 	define("USERNAME","root");
 	define("PASSWORD","");
 

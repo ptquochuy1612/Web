@@ -23,7 +23,7 @@
 {
 	position: absolute;
 	left: 10px;
-	top: 20px;
+	top: 15px;
 	height: 120px;
 	width: 120px;
 	
@@ -98,7 +98,7 @@
 	position: absolute;
 	margin-left: 590px;
 	margin-top: 40px;
-	margin-bottom: 50px;
+	
 }
 .item
 {
@@ -219,12 +219,29 @@ ul, ol
 }
 .ProductList
 {
-	position: absolute;
-	padding-top: 40px;
-	padding-left: 20px;
-	font-size: 25px;
+	
+	margin-top: 65px;
+	margin-left: 50px;
+	border: 1px 1px 1px 1px solid;
+
+}
+.ProductList img
+{
+	height: 85px;
+	width: 85px;
+}
+.ProductList strong
+{
+	font-size: 20px;
 	color: #ff6f61;
 }
+.ProductList th
+{
+	width: 50px;
+	padding-top: 10px;
+	padding-left: 50px;
+}
+
 .BestTitle
 {
 	padding-left: 100px;
